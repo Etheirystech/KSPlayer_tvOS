@@ -42,10 +42,9 @@ let package = Package(
     ]
 )
 
-var ffmpegKitPath = FileManager.default.currentDirectoryPath + "/FFmpegKit"
-if !FileManager.default.fileExists(atPath: ffmpegKitPath) {
-    ffmpegKitPath = FileManager.default.currentDirectoryPath + "/../FFmpegKit"
-}
+package.dependencies = [
+    .package(url: "https://github.com/Etheirystech/FFmpegKit_tvOS.git", branch: "main"),
+]
 
 if !FileManager.default.fileExists(atPath: ffmpegKitPath), let url = URL(string: #file) {
     let path = url.deletingLastPathComponent().path
