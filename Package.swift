@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "KSPlayer",
             dependencies: [
-                .product(name: "FFmpegKit", package: "FFmpegKit_tvOS"),
+                .product(name: "FFmpegKit_tvOS", package: "FFmpegKit_tvOS"),
 //                .product(name: "Libass", package: "FFmpegKit"),
 //                .product(name: "Libmpv", package: "FFmpegKit"),
                 "DisplayCriteria",
